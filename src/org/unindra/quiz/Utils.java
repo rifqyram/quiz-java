@@ -68,4 +68,27 @@ public class Utils {
         return formatter.format(intPrice);
     }
 
+    public static String generateId() {
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String numeric = "0123456789";
+        StringBuilder sb = new StringBuilder();
+        Random random = new Random();
+        int lengthString = 2;
+        int lengthInt = 3;
+
+        for (int i = 0; i < lengthString; i++) {
+            int index = random.nextInt(alphabet.length());
+            char randomChar = alphabet.charAt(index);
+            sb.append(randomChar);
+        }
+
+        for (int i = 0; i < lengthInt; i++) {
+            int index = random.nextInt(numeric.length());
+            char randomChar = numeric.charAt(index);
+            sb.append(randomChar);
+        }
+
+        return sb.toString();
+    }
+
 }
