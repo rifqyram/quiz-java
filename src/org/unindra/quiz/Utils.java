@@ -22,6 +22,7 @@ public class Utils {
                 if (!validation.apply((T) i)) continue;
                 return i;
             } catch (Exception ignored) {
+                System.out.println("Input Must be Numeric");
             }
         }
     }
@@ -36,6 +37,7 @@ public class Utils {
                 if (i == 0) continue;
                 return i;
             } catch (Exception ignored) {
+                System.out.println("Input Must be Numeric");
             }
         }
     }
